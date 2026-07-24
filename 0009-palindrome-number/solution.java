@@ -12,7 +12,7 @@ class Solution
         while (x != 0)
         {
             int d = x % 10;
-            x = x / 10;
+            x /= 10;
             reverse = (reverse * 10) + d;
         }
 
