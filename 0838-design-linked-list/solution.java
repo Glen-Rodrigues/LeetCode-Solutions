@@ -22,18 +22,8 @@ class MyLinkedList
     
     public int get(int index) 
     {
-        if (index < 0 || index >= size)
-        {
-            return -1;
-        }
-        
-        Node temp = head;
-        for (int i = 0; i < index; i++)
-        {
-            temp = temp.next;
-        }
-
-    return temp.val;
+        Node node = getNodeAtIndex(index);
+        return (node != null) ? node.val : -1;
     }
 
     private Node getNodeAtIndex(int index)
@@ -110,6 +100,10 @@ class MyLinkedList
         else if (index == 0)
         {
             head = head.next;
+            if (size == 1)
+            {
+                tail = null;
+            }
         }
         else if (index == size - 1)
         {
