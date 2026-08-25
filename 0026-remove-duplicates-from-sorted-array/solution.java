@@ -1,24 +1,18 @@
-class Solution {
-    public int removeDuplicates(int[] nums) {
-
-        if(nums.length == 0)
-        {
-            return 0;
-        }
-
-        int index = 1;
+class Solution 
+{
+    public int removeDuplicates(int[] nums) 
+    {
+        int index = 0;
         int length = nums.length;
 
-        for(int i = 1; i < length; i++)
+        for (int i = 1; i < length; i++)
         {
-
-            if(nums[i] != nums[i-1])
+            if (nums[index] != nums[i])
             {
-                nums[index] = nums[i];
-                index++;
+                nums[++index] = nums[i];
             }
         }
 
-        return index;
+        return ++index;
     }
 }
