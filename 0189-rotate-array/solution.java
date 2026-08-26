@@ -15,10 +15,6 @@ class Solution
 
     public void rotate(int[] nums, int k) 
     {
-        if(k % nums.length == 0)
-        {
-            return;
-        }
         k = k % nums.length;
 
         reverse(nums, 0, nums.length - 1);
