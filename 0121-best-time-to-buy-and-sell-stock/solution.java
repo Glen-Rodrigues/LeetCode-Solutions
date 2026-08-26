@@ -11,10 +11,11 @@ class Solution
             {
                 min_price = price;
             }
-
-            if (price - min_price > max_profit)
+            
+            int profit = price - min_price;
+            if (profit > max_profit)
             {
-                max_profit = price - min_price;
+                max_profit = profit;
             }
         }
         return max_profit;
