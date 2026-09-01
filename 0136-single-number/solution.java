@@ -6,7 +6,7 @@ class Solution
 
         for (int num : nums)
         {
-            res = res ^ num;
+            res ^= num;
         }
 
         return res;
